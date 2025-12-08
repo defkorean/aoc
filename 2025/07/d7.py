@@ -20,6 +20,7 @@ def solution():
     for r in manifold:
         next_beams = defaultdict(int)
         
+        # k = row where ^ is found, v = # of timelines
         for i, n in beams.items():
             if r[i] == '^':
                 num_splits += 1
