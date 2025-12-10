@@ -3,7 +3,7 @@ import os
 from collections import defaultdict
 
 SCRIPT_DIR = os.path.dirname(__file__)
-INPUT_FILE = Path(SCRIPT_DIR, 'input.txt')
+INPUT_FILE = Path(SCRIPT_DIR, 'sample_input.txt')
 
 def parse_input():
     with open(INPUT_FILE, mode='rt') as f:
@@ -21,6 +21,7 @@ def solution():
         next_beams = defaultdict(int)
         
         # k = row where ^ is found, v = # of timelines
+        print(beams)
         for i, n in beams.items():
             if r[i] == '^':
                 num_splits += 1
